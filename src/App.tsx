@@ -1,20 +1,14 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import Footer from './components/Shared/Footer/Footer';
-import Navbar from './components/Shared/Navbar/Navbar';
-import Home from './pages/Home/Home';
+import User from './components/User';
 
 function App() {
   return (
-
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <>
+      <h1>User Management</h1>
+      <User name={"Saiful Islam"} age={21} isRegestered={true} />
+      <User name={"Arshadul Islam"} age={22} isRegestered={false} />
+    </>
   );
 }
 
