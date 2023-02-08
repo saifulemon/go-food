@@ -3,6 +3,7 @@ import './App.css';
 import Button from './components/Button';
 import DataFetch from './components/DataFetch';
 import Post from './components/Post';
+import TextStyle from './components/TextStyle';
 import User from './components/User';
 import UserDemo from './components/UserDemo';
 
@@ -33,6 +34,13 @@ function App() {
       location: "Fazil Pur"
     }
   ]
+
+  const btnStyles = {
+    color: "blue", 
+    backgroundColor: "tan", 
+    fontSize: "60px"
+  } 
+
   return (
     <div className='App'>
       <Button>click me</Button>
@@ -42,6 +50,7 @@ function App() {
       <UserDemo users={users} />
       <DataFetch status="error"/>
       <Post/>
+      <TextStyle textStyle={btnStyles} />
     </div>
   );
 }
