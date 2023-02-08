@@ -4,6 +4,7 @@ import Button from './components/Button';
 import DataFetch from './components/DataFetch';
 import NewUser from './components/NewUser';
 import Post from './components/Post';
+import Student from './components/Student';
 import TextStyle from './components/TextStyle';
 import User from './components/User';
 import UserDemo from './components/UserDemo';
@@ -73,6 +74,8 @@ function App() {
       <h5>{user?.name}</h5>
       <br />
       <NewUser />
+      <br />
+      <Student />
     </div>
   );
 }
