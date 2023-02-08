@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import Button from './components/Button';
 import DataFetch from './components/DataFetch';
+import NewUser from './components/NewUser';
 import Post from './components/Post';
 import TextStyle from './components/TextStyle';
 import User from './components/User';
@@ -70,6 +71,8 @@ function App() {
       <button onClick={handleIncrement}>Increment</button>
       <button onClick={handleAddUser}>Add User</button>
       <h5>{user?.name}</h5>
+      <br />
+      <NewUser />
     </div>
   );
 }
