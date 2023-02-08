@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Button from './components/Button';
 import DataFetch from './components/DataFetch';
@@ -7,7 +7,14 @@ import TextStyle from './components/TextStyle';
 import User from './components/User';
 import UserDemo from './components/UserDemo';
 
+type user = {
+  id: number,
+  name: string,
+}
+
 function App() {
+  const [count, setCount] = useState<number>(0);
+  const [user, setUser] = useState<null | user>(null);
 
   const user1 = {
     institute: "Feni Computer Institute",
@@ -41,6 +48,14 @@ function App() {
     fontSize: "60px"
   } 
 
+  const handleIncrement = () => {
+    setCount(count + 1);
+  }
+
+  const handleAddUser = () => {
+    setUser({id: 1, name: "Saiful Islam"});
+  }
+
   return (
     <div className='App'>
       <Button>click me</Button>
@@ -51,6 +66,10 @@ function App() {
       <DataFetch status="error"/>
       <Post/>
       <TextStyle textStyle={btnStyles} />
+      <h1>Count: {count}</h1>
+      <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleAddUser}>Add User</button>
+      <h5>{user?.name}</h5>
     </div>
   );
 }
