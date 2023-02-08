@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
+import Button from './components/Button';
 import DataFetch from './components/DataFetch';
+import Post from './components/Post';
 import User from './components/User';
 import UserDemo from './components/UserDemo';
 
@@ -32,13 +34,15 @@ function App() {
     }
   ]
   return (
-    <>
+    <div className='App'>
+      <Button>click me</Button>
       <h1>User Management</h1>
       <User name={"Saiful Islam"} age={21} isRegestered={true} lang={["Hindi", "Arabic"]} user={user1} />
       <User name={"Arshadul Islam"} age={22} isRegestered={false} lang={["Bangla","English"]} user={user2} />
       <UserDemo users={users} />
       <DataFetch status="error"/>
-    </>
+      <Post/>
+    </div>
   );
 }
 
