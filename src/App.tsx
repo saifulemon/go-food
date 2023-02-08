@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import DataFetch from './components/DataFetch';
 import User from './components/User';
 import UserDemo from './components/UserDemo';
 
@@ -36,6 +37,7 @@ function App() {
       <User name={"Saiful Islam"} age={21} isRegestered={true} lang={["Hindi", "Arabic"]} user={user1} />
       <User name={"Arshadul Islam"} age={22} isRegestered={false} lang={["Bangla","English"]} user={user2} />
       <UserDemo users={users} />
+      <DataFetch status="error"/>
     </>
   );
 }
